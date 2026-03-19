@@ -1,3 +1,8 @@
+'''
+    @about: Code to retrieve data on BLS QCEW 
+    @output: returns a csv specified for residential electrician **BUSINESSES**
+'''
+
 import pandas as pd
 import numpy as np
 from plotnine import *
@@ -65,6 +70,7 @@ county_list = toFipsSeries(county_fips["county_fips"])
 print(type(county_list))
 
 # method to finally retrieve everything. i mean it works but how do we checkpoint
+# too long for its own good...
 df = pd.DataFrame()
 years = range(2018,2020,1)
 for county in county_list:
